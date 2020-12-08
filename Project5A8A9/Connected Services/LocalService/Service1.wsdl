@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50575/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50575/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50575/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:50575/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Encrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Encrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Decrypt_InputMessage">
+    <wsdl:part name="parameters" element="tns:Decrypt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Decrypt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetWindEnergyIndex_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWindEnergyIndex" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetWindEnergyIndex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWindEnergyIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetVerifierString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifierString" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetVerifierString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifierStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addAcoundt_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAcoundt" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addAcoundt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAcoundtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_search_InputMessage">
+    <wsdl:part name="parameters" element="tns:search" />
+  </wsdl:message>
+  <wsdl:message name="IService1_search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromXML" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:returnXML" />
+  </wsdl:message>
+  <wsdl:message name="IService1_returnXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:returnXMLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Encrypt" message="tns:IService1_Encrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EncryptResponse" message="tns:IService1_Encrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Decrypt" message="tns:IService1_Decrypt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DecryptResponse" message="tns:IService1_Decrypt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWindEnergyIndex">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetWindEnergyIndex" message="tns:IService1_GetWindEnergyIndex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetWindEnergyIndexResponse" message="tns:IService1_GetWindEnergyIndex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifierString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetVerifierString" message="tns:IService1_GetVerifierString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetVerifierStringResponse" message="tns:IService1_GetVerifierString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetImage" message="tns:IService1_GetImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetImageResponse" message="tns:IService1_GetImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAcoundt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addAcoundt" message="tns:IService1_addAcoundt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addAcoundtResponse" message="tns:IService1_addAcoundt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/search" message="tns:IService1_search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchResponse" message="tns:IService1_search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeFromXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/removeFromXML" message="tns:IService1_removeFromXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/removeFromXMLResponse" message="tns:IService1_removeFromXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="returnXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/returnXML" message="tns:IService1_returnXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/returnXMLResponse" message="tns:IService1_returnXML_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://tempuri.org/IService1/Encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decrypt">
+      <soap:operation soapAction="http://tempuri.org/IService1/Decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWindEnergyIndex">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetWindEnergyIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifierString">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetVerifierString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAcoundt">
+      <soap:operation soapAction="http://tempuri.org/IService1/addAcoundt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <soap:operation soapAction="http://tempuri.org/IService1/search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromXML">
+      <soap:operation soapAction="http://tempuri.org/IService1/removeFromXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnXML">
+      <soap:operation soapAction="http://tempuri.org/IService1/returnXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:50575/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

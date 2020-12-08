@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Members xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MemberSchema.xsd">
+  <Member>
+    <user_name>Test</user_name>
+    <password>check</password>
+  </Member>
+  <Member>
+    <user_name>Test2</user_name>
+    <password>check2</password>
+  </Member>
+  <Member>
+    <user_name>TestEncrypt</user_name>
+    <password>Qvm5cOQ/H6E=</password>
+  </Member>
+  <Member>
+    <user_name>eee</user_name>
+    <password>Tm/slU4z00s=</password>
+  </Member>
+</Members>

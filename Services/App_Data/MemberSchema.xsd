@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xsd:element name="Members">
+    <xsd:sequence maxOccurs="unbounded">
+      <xsd:element name="Member" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequences>
+            <xsd:element name="user_name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="password" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          </xsd:sequences>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:element>
+</xsd:schema>
